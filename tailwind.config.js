@@ -82,4 +82,16 @@ module.exports = {
     }
     addUtilities(animationDelay)
   })],
+  future: {
+    removeDeprecatedGapUtilities: true,
+    purgeLayersByDefault: true,
+  },
+  purge: {
+    enabled: process.env.NODE_ENV === 'production',
+    content: [
+      './index.html',
+      './src/**/*.{html,js}',
+      './dist/**/*.{html,js}'
+    ],
+  },
 }

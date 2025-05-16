@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HotForex</title>
+  <meta name="description" content="HotForex - Highlight TA - Test" />
   <meta property="og:description" content="HotForex - Highlight TA">
   <meta property="og:type" content="website">
   <meta name="author" content="Lyon.dev_">
@@ -12,7 +13,7 @@
   <meta property="og:image:type" content="image/png">
   <meta property="og:image" content="dist/img/cover.png">
   <meta name="theme-color" content="#D00C10">
-  <link rel="icon" href="dist/img/favicon.png" type="image/png" />
+  <link rel="icon" href="/favicon.png" type="image/png" />
   <link rel="stylesheet" href="dist/css/output.css" />
 </head>
 
@@ -29,17 +30,17 @@
         </button>
         <ul class="absolute lg:relative lg:flex lg:gap-6 text-2xl lg:text-sm text-white uppercase lg:hover:*:*:underline *:*:underline-offset-8 *:*:opacity-90 hover:*:*:opacity-100 *:*:transition-opacity max-lg:divide-y-2 max-lg:divide-white/10 max-lg:z-50 max-lg:absolute max-lg:p-8 max-lg:w-full max-lg:*:*:py-4 max-lg:*:*:px-2 max-lg:*:*:block max-lg:hover:*:*:bg-white/10">
           <li>
-            <a href="#header">
-              <span class="fa-solid fa-house"></span>
+            <a href="#header" aria-label="Go to home section">
+              <span class="fa-solid fa-house" aria-hidden="true"></span>
               <span class="hidden">Home</span>
             </a>
           </li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Products</a></li>
-          <li><a href="#">Accounts</a></li>
-          <li><a href="#">Platforms</a></li>
-          <li><a href="#">Tools</a></li>
-          <li><a href="#">Education</a></li>
+          <li><a href="#" aria-label="About HotForex">About</a></li>
+          <li><a href="#" aria-label="Our products">Products</a></li>
+          <li><a href="#" aria-label="Account types">Accounts</a></li>
+          <li><a href="#" aria-label="Trading platforms">Platforms</a></li>
+          <li><a href="#" aria-label="Trading tools">Tools</a></li>
+          <li><a href="#" aria-label="Trading education">Education</a></li>
         </ul>
       </nav>
       <button id="mobile-button" class="btn flex items-center lg:hidden">
@@ -52,7 +53,7 @@
   </header>
   <!-- Section - Hero -->
   <section class="bg-navy-700 hero-section text-white relative isolate overflow-hidden max-sm:mt-20">
-    <div class="container grid md:text-left md:grid-cols-[1fr_60%] gap-8 md:gap-20 items-end pt-6">
+    <div class="container grid lg:text-left lg:grid-cols-[1fr_60%] gap-8 md:gap-20 items-end md:items-center pt-6">
       <div class="pb-3">
         <h1 class="text-5xl font-light">HotForex App</h1>
         <h2 class="text-4xl font-extralight mt-2">Your Indispensable Tool</h2>
@@ -70,7 +71,7 @@
           </a>
         </div>
       </div>
-      <div class="">
+      <div class="self-end">
         <img src="dist/img/webp/mockup-iphone.webp" alt="HotForex Mobile Trading App Interface on iPhone" />
       </div>
     </div>
@@ -80,15 +81,15 @@
   <section class="form container py-12 md:py-20">
     <form action="#" class="grid grid-cols-1 md:grid-cols-4 gap-4 items-start">
       <div class="relative">
-        <input type="text" placeholder="First Name *" class="input-field" required />
+        <input type="text" name="firstName" placeholder="First Name *" class="input-field" required />
         <span class="text-red-500 text-xs mt-1 hidden">This field is required</span>
       </div>
       <div class="relative">
-        <input type="text" placeholder="Last Name *" class="input-field" required />
+        <input type="text" name="lastName" placeholder="Last Name *" class="input-field" required />
         <span class="text-red-500 text-xs mt-1 hidden">This field is required</span>
       </div>
       <div class="relative">
-        <input type="email" placeholder="Email *" class="input-field" required />
+        <input type="email" name="email" placeholder="Email *" class="input-field" required />
         <span class="text-red-500 text-xs mt-1 hidden">This field is required</span>
       </div>
       <div class="flex items-center h-full max-sm:order-1">
@@ -96,7 +97,7 @@
         <label for="privacy" class="text-xs text-gray-700">I have read and accepted the privacy policy <br>Trading Forex &amp; CFDs is risky *</label>
       </div>
       <div class="relative">
-        <select id="countrySelect" class="input-field input-field__select" required>
+        <select id="countrySelect" name="country" class="input-field input-field__select" required>
           <option value="" disabled>Country of Residence *</option>
           <option value="US" selected>United States</option>
           <option value="BR">Brazil</option>
@@ -105,14 +106,14 @@
         <span class="text-red-500 text-xs mt-1 hidden">This field is required</span>
       </div>
       <div class="flex">
-        <input type="text" id="countryCode" class="w-20 input-field" readonly />
+        <input type="text" id="countryCode" name="countryCode" class="w-20 input-field" readonly />
         <div class="relative flex-1">
-          <input type="text" placeholder="Phone Number *" class="input-field" required />
+          <input type="tel" name="phone" placeholder="Phone Number *" class="input-field" pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number" required />
           <span class="text-red-500 text-xs mt-1 hidden">This field is required</span>
         </div>
       </div>
       <div class="relative">
-        <select class="input-field input-field__select" required>
+        <select name="currency" class="input-field input-field__select" required>
           <option value="" disabled selected>Currency *</option>
           <option value="USD">USD</option>
           <option value="BRL">BRL</option>
@@ -139,7 +140,7 @@
             <p class="mt-2 leading-tight">It is a long established fact that a reader</p>
           </div>
         </div>
-        <div class="max-sm:order-1"><img src="./dist/img/webp/bg-phone.webp" alt="HotForex Mobile Trading Platform Dashboard"></div>
+        <div class="max-sm:order-1"><img src="./dist/img/webp/bg-phone.webp" alt="HotForex Mobile Trading Platform Dashboard" class="max-sm:mx-auto"></div>
         <div class="grid gap-12 max-sm:grid-cols-2">
           <div>
             <img src="./dist/img/icons/icon-03.webp" alt="Secure Trading Environment Icon" class="object-contain" width="80" height="80">
