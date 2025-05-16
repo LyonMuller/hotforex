@@ -1,0 +1,25 @@
+{
+  "name": "hotforex",
+  "version": "1.0.0",
+  "description": "HotForex project",
+  "scripts": {
+    "dev": "npm run build:css && npm run build:js",
+    "build:css": "tailwindcss -i src/css/input.css -o dist/css/output.css",
+    "build:js": "babel src/js/main.js -o dist/js/main.min.js --minified",
+    "watch:css": "tailwindcss -i src/css/input.css -o dist/css/output.css --watch",
+    "watch:js": "babel src/js/main.js -o dist/js/main.min.js --watch --minified",
+    "serve": "browser-sync start --server --files 'index.html, dist/**/*.css, dist/**/*.js' --no-notify",
+    "watch": "concurrently \"npm run watch:css\" \"npm run watch:js\" \"npm run serve\""
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.23.9",
+    "@babel/core": "^7.24.0",
+    "@babel/preset-env": "^7.24.0",
+    "autoprefixer": "^10.4.17",
+    "browser-sync": "^3.0.3",
+    "concurrently": "^8.2.2",
+    "postcss": "^8.4.35",
+    "postcss-cli": "^11.0.0",
+    "tailwindcss": "^3.4.17"
+  }
+}

@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+  .hero-section {
+    background: radial-gradient(20% 55% at 80% 20%, #45527E 0%, #151A2A 100%);
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      height: 150%;
+      width: 60%;
+      z-index: -1;
+      @apply bg-navy-400 opacity-10 bg-blend-multiply;
+      mask: url('../img/svg/bg-triangle.svg') no-repeat center / cover;
+    }
+    &:before {
+      left: -20%;
+    }
+    &:after {
+      right: -20%;
+    }
+  }
+
+  .input-field {
+    @apply border border-gray-400 px-4 py-3 text-lg focus:outline-none focus:border-red-600 w-full;
+  }
+  
+  .input-field__select{ 
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M233.4 406.6a32 32 0 0 0 45.3 0l192-192a32 32 0 0 0-45.3-45.3L256 338.7 86.6 169.4a32 32 0 0 0-45.3 45.3l192 192z"/></svg>') no-repeat right 1rem center / 1rem;
+    padding-right: 2.5rem;
+    @apply appearance-none pr-10;
+  }
+
+  .icons-section {
+    &:before{
+      content: "";
+      position: absolute;
+      top: 0;
+      height: 150%;
+      width: 60%;
+      z-index: -1;
+      @apply bg-white opacity-80;
+      mask: url('../img/svg/bg-triangle.svg') no-repeat center / cover;
+      left: -20%;
+    }
+  }
+
+  .mockup-section {
+    background: radial-gradient(20% 41% at 54% 0%, #6270a1 0%, #242944 100%);
+  }
+
+  @media (width <= 768px) {
+    .hero-section {
+      background: radial-gradient(50% 32% at 99% 20%, #45527E 0%, #151A2A 100%);
+    }
+    .mockup-section {
+      background: radial-gradient(50% 20% at 50% 0%, #6270a1 0%, #242944 100%)
+    }
+    .icons-section {
+      &:before{
+        width: 100%;
+        height: 100%;
+        top: 0;
+      }
+    }
+  }
+}

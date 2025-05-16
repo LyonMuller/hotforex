@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html class="scroll-smooth scroll-mt-12" lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HotForex</title>
+  <meta property="og:description" content="HotForex - Highlight TA">
+  <meta property="og:type" content="website">
+  <meta name="author" content="Lyon.dev_">
+  <meta property="og:site_name" content="HotForex">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image" content="dist/img/cover.png">
+  <meta name="theme-color" content="#D00C10">
+  <link rel="icon" href="dist/img/favicon.png" type="image/png" />
+  <link rel="stylesheet" href="dist/css/output.css" />
+</head>
+
+<body>
+  <header class="bg-black py-5 fixed top-0 left-0 right-0 z-50 md:relative" id="header">
+    <div class="container flex justify-between items-center md:items-end">
+      <a href="#" class="max-w-44 hover:opacity-90 transition-opacity duration-300">
+        <img src="dist/img/webp/hotforex-logo.webp" alt="HotForex Trading Platform Logo" width="176" height="53">
+      </a>
+      <nav id="mobile-menu" class="lg:block max-lg:fixed max-lg:w-full max-lg:inset-0 max-lg:z-40 hidden max-lg:items-center">
+        <div class="fixed lg:hidden inset-0 bg-navy"></div>
+        <button id="close-menu" class="absolute top-4 right-4 text-white hover:opacity-80 transition-opacity lg:hidden">
+          <span class="fa-solid fa-xmark text-2xl"></span>
+        </button>
+        <ul class="absolute lg:relative lg:flex lg:gap-6 text-2xl lg:text-sm text-white uppercase lg:hover:*:*:underline *:*:underline-offset-8 *:*:opacity-90 hover:*:*:opacity-100 *:*:transition-opacity max-lg:divide-y-2 max-lg:divide-white/10 max-lg:z-50 max-lg:absolute max-lg:p-8 max-lg:w-full max-lg:*:*:py-4 max-lg:*:*:px-2 max-lg:*:*:block max-lg:hover:*:*:bg-white/10">
+          <li>
+            <a href="#header">
+              <span class="fa-solid fa-house"></span>
+              <span class="hidden">Home</span>
+            </a>
+          </li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Accounts</a></li>
+          <li><a href="#">Platforms</a></li>
+          <li><a href="#">Tools</a></li>
+          <li><a href="#">Education</a></li>
+        </ul>
+      </nav>
+      <button id="mobile-button" class="btn flex items-center lg:hidden">
+        Menu
+        <span class="h-4 w-5 m-auto flex flex-col justify-between *:h-0.5 *:rounded-md *:bg-white">
+          <span></span><span></span><span></span>
+        </span>
+      </button>
+    </div>
+  </header>
+  <!-- Section - Hero -->
+  <section class="bg-navy-700 hero-section text-white relative isolate overflow-hidden max-sm:mt-20">
+    <div class="container grid md:text-left md:grid-cols-[1fr_60%] gap-8 md:gap-20 items-end pt-6">
+      <div class="pb-3">
+        <h1 class="text-5xl font-light">HotForex App</h1>
+        <h2 class="text-4xl font-extralight mt-2">Your Indispensable Tool</h2>
+        <ul class="my-8">
+          <li>- Lorem Ipsum is simply dummy text of the printing and</li>
+          <li>- Lorem Ipsum is simply dummy text of the</li>
+          <li>- Lorem Ipsum is simply dummy text of the printing and</li>
+        </ul>
+        <div class="flex justify-center md:justify-start gap-4">
+          <a href="#" title="Download on Google Play">
+            <img src="dist/img/webp/google-play-logo.webp" alt="Download HotForex Trading App from Google Play Store" width="155" height="50" loading="lazy" class="hover:opacity-85 transition-opacity duration-300" />
+          </a>
+          <a href="#" title="Download on the App Store">
+            <img src="dist/img/webp/app-store-logo.webp" alt="Download HotForex Trading App from Apple App Store" width="155" height="50" loading="lazy" class="hover:opacity-85 transition-opacity duration-300" />
+          </a>
+        </div>
+      </div>
+      <div class="">
+        <img src="dist/img/webp/mockup-iphone.webp" alt="HotForex Mobile Trading App Interface on iPhone" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Section - Form -->
+  <section class="form container py-12 md:py-20">
+    <form action="#" class="grid grid-cols-1 md:grid-cols-4 gap-4 items-start">
+      <div class="relative">
+        <input type="text" placeholder="First Name *" class="input-field" required />
+        <span class="text-red-500 text-xs mt-1 hidden">This field is required</span>
+      </div>
+      <div class="relative">
+        <input type="text" placeholder="Last Name *" class="input-field" required />
+        <span class="text-red-500 text-xs mt-1 hidden">This field is required</span>
+      </div>
+      <div class="relative">
+        <input type="email" placeholder="Email *" class="input-field" required />
+        <span class="text-red-500 text-xs mt-1 hidden">This field is required</span>
+      </div>
+      <div class="flex items-center h-full max-sm:order-1">
+        <input type="checkbox" id="privacy" class="mr-2 w-5 h-5 accent-red-600" required />
+        <label for="privacy" class="text-xs text-gray-700">I have read and accepted the privacy policy <br>Trading Forex &amp; CFDs is risky *</label>
+      </div>
+      <div class="relative">
+        <select id="countrySelect" class="input-field input-field__select" required>
+          <option value="" disabled>Country of Residence *</option>
+          <option value="US" selected>United States</option>
+          <option value="BR">Brazil</option>
+          <option value="PT">Portugal</option>
+        </select>
+        <span class="text-red-500 text-xs mt-1 hidden">This field is required</span>
+      </div>
+      <div class="flex">
+        <input type="text" id="countryCode" class="w-20 input-field" readonly />
+        <div class="relative flex-1">
+          <input type="text" placeholder="Phone Number *" class="input-field" required />
+          <span class="text-red-500 text-xs mt-1 hidden">This field is required</span>
+        </div>
+      </div>
+      <div class="relative">
+        <select class="input-field input-field__select" required>
+          <option value="" disabled selected>Currency *</option>
+          <option value="USD">USD</option>
+          <option value="BRL">BRL</option>
+          <option value="EUR">EUR</option>
+        </select>
+        <span class="text-red-500 text-xs mt-1 hidden">This field is required</span>
+      </div>
+      <button type="submit" class="max-sm:order-2 bg-red-600 text-white text-xl font-bold py-3 transition hover:bg-red-700">REGISTER NOW</button>
+    </form>
+  </section>
+
+  <!-- Section - Icons -->
+  <section class="bg-gray-100 py-24 icons-section relative overflow-hidden isolate">
+    <div class="container grid justify-items-center">
+      <h2 class="text-center text-2xl font-semibold">This is dummy text</h2>
+      <div class="grid items-center grid-cols-1 md:grid-cols-[1fr_2fr_1fr] max-w-screen-md gap-8 mt-16">
+        <div class="grid max-sm:grid-cols-2 gap-12 md:text-right">
+          <div>
+            <img src="./dist/img/icons/icon-01.webp" alt="Real-time Market Analysis Icon" class="object-contain md:mr-0 md:ml-auto" width="80" height="80">
+            <p class="mt-2 leading-tight">It is a long established fact that a reader</p>
+          </div>
+          <div>
+            <img src="./dist/img/icons/icon-02.webp" alt="Advanced Trading Tools Icon" class="object-contain md:mr-0 md:ml-auto" width="80" height="80">
+            <p class="mt-2 leading-tight">It is a long established fact that a reader</p>
+          </div>
+        </div>
+        <div class="max-sm:order-1"><img src="./dist/img/webp/bg-phone.webp" alt="HotForex Mobile Trading Platform Dashboard"></div>
+        <div class="grid gap-12 max-sm:grid-cols-2">
+          <div>
+            <img src="./dist/img/icons/icon-03.webp" alt="Secure Trading Environment Icon" class="object-contain" width="80" height="80">
+            <p class="mt-2 leading-tight">The standard chunk of Lorem Ipsum</p>
+          </div>
+          <div>
+            <img src="./dist/img/icons/icon-04.webp" alt="24/7 Customer Support Icon" class="object-contain" width="80" height="80">
+            <p class="mt-2 leading-tight">The standard chunk of Lorem Ipsum</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Text / Mockup -->
+  <section class="mockup-section">
+    <div class="container">
+      <div class="grid md:grid-cols-2 gap-4 md:gap-8 items-end">
+        <div class="flex justify-center md:justify-end max-sm:order-2">
+          <img src="./dist/img/webp/bg-mockup-white.webp" alt="HotForex Trading Platform Mobile App Interface" width="400">
+        </div>
+        <div class="pt-20 pb-12 md:py-20">
+          <h2 class="text-white text-2xl font-semibold">What is Lorem Ipsum?M<br>Lorem Ipsum is simply dummy</h2>
+          <ul class="grid gap-3 mt-6">
+            <li class="text-white">
+              <span class="text-red-600 font-semibold">Lorem Ipsum passages</span><br>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+            </li>
+            <li class="text-white">
+              <span class="text-red-600 font-semibold">Lorem Ipsum passages</span><br>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+            </li>
+            <li class="text-white">
+              <span class="text-red-600 font-semibold">Lorem Ipsum passages</span><br>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Download -->
+  <section class="text-center py-16 bg-white" aria-labelledby="download-apps">
+    <div class="container mx-auto px-4 max-sm:text-balance">
+      <h2 class="font-light">
+        Contrary to popular belief, Lorem Ipsum is not simply random text.
+      </h2>
+      <p>
+        It has roots in a piece of classical Latin literature from 45 BC,<br />
+        making it over 2000 years old.
+      </p>
+      <p class="font-semibold">
+        DOWNLOAD IT NOW!
+      </p>
+      <div class="flex justify-center items-center gap-4 mt-8 flex-wrap">
+        <a href="#" title="Download on Google Play">
+          <img src="dist/img/webp/google-play-logo.webp" alt="Download HotForex Trading App from Google Play Store" width="155" height="50" loading="lazy" class="hover:opacity-90 transition-opacity duration-300" />
+        </a>
+        <a href="#" title="Download on the App Store">
+          <img src="dist/img/webp/app-store-logo.webp" alt="Download HotForex Trading App from Apple App Store" width="155" height="50" loading="lazy" class="hover:opacity-90 transition-opacity duration-300" />
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-neutral-900 text-gray-300 text-sm">
+    <div class="bg-neutral-800 py-4 max-sm:py-3">
+      <div class="container mx-auto px-4 flex justify-between items-center max-sm:flex-col max-sm:gap-2">
+        <p class="flex items-center gap-2 text-lg">
+          <i class="fas fa-trophy text-red-500"></i>
+          <span>Winner of 19 Industry Awards</span>
+        </p>
+        <div class="flex items-center gap-4 text-gray-400 text-lg *:hover:*:text-white *:*:transition-colors *:*:duration-300">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Google Plus"><i class="fab fa-google-plus-g"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="#" aria-label="Analytics"><i class="fas fa-chart-bar"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="container grid md:grid-cols-[1fr_4fr] gap-10 py-10">
+
+      <!-- Contact Us -->
+      <div>
+        <h3 class="uppercase font-bold mb-3">Contact Us</h3>
+        <ul>
+          <li class="flex items-center gap-2">
+            <i class="fas fa-envelope text-red-600"></i>
+            <a href="mailto:support@hfeu.com" class="hover:underline">support@hfeu.com</a>
+          </li>
+          <li class="flex items-center gap-2">
+            <i class="fas fa-phone text-red-600"></i>
+            <a href="tel:+35724400165" class="hover:underline">+357-24-400165</a>
+          </li>
+          <li class="flex items-center gap-2">
+            <i class="fas fa-comments text-red-600"></i>
+            <a href="#" class="hover:underline">Live Chat</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="grid md:grid-cols-5 gap-8">
+        <div>
+          <h3 class="uppercase font-bold mb-3">About</h3>
+          <ul>
+            <li><a href="#" class="hover:underline">About HotForex</a></li>
+            <li><a href="#" class="hover:underline">Why HotForex</a></li>
+            <li><a href="#" class="hover:underline">Regulation and License</a></li>
+            <li><a href="#" class="hover:underline">Security of Funds</a></li>
+            <li><a href="#" class="hover:underline">Awards</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="uppercase font-bold mb-3">Products</h3>
+          <ul>
+            <li><a href="#" class="hover:underline">Forex</a></li>
+            <li><a href="#" class="hover:underline">Metals and Oil</a></li>
+            <li><a href="#" class="hover:underline">Indices</a></li>
+            <li><a href="#" class="hover:underline">Shares</a></li>
+            <li><a href="#" class="hover:underline">Commodity CFDs</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="uppercase font-bold mb-3">Trading</h3>
+          <ul>
+            <li><a href="#" class="hover:underline">Trading Tools</a></li>
+            <li><a href="#" class="hover:underline">Forex Education</a></li>
+            <li><a href="#" class="hover:underline">Platforms</a></li>
+            <li><a href="#" class="hover:underline">Account Types</a></li>
+            <li><a href="#" class="hover:underline">Exclusive Analysis</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="uppercase font-bold mb-3">Promotions</h3>
+          <ul>
+            <li><a href="#" class="hover:underline">Loyalty Program</a></li>
+            <li><a href="#" class="hover:underline">Bonus Offerings</a></li>
+            <li><a href="#" class="hover:underline">Contests & Rewards</a></li>
+            <li><a href="#" class="hover:underline">Free Funding</a></li>
+            <li><a href="#" class="hover:underline">Deposit</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="uppercase font-bold mb-3">Affiliates</h3>
+          <ul>
+            <li><a href="#" class="hover:underline">Affiliates</a></li>
+            <li><a href="#" class="hover:underline">About HF Affiliates</a></li>
+            <li><a href="#" class="hover:underline">Affiliate Types</a></li>
+            <li><a href="#" class="hover:underline">Marketing Tools</a></li>
+            <li><a href="#" class="hover:underline">Analytics</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="https://kit.fontawesome.com/8f043738e0.js" crossorigin="anonymous"></script>
+    <script src="dist/js/jquery.min.js" defer></script>
+    <script src="dist/js/main.min.js" defer></script>
+  </footer>
+</body>
+
+</html>
